@@ -1,2 +1,2 @@
-# embarrassingBabyPictures
-Parents can share embarrassing baby pictures with their potential dates
+# Pet Play dates
+Pet Owners can setup play dates for their pets
