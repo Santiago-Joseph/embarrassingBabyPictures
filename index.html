@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pet Playdate</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
-<body>
-    
+<body class="container">
+    <div class="row">
+        <div class="col">
+            <img src="img/pawprint.png" class="img-fluid pawprint" alt="pawprint">
+        </div>
+        <div class="col">
+            <div class="container-fluid">
+                <h3>Pet Playdate</h3>
+                <form class="form" data-pet="loginform">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="usr" placeholder="Username" name="loginUser" required>    
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd" placeholder="Password" name="loginPass" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Login</button>
+                        <button type="button">Sign up</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+</div>
 </body>
 </html>
