@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Post a Playdate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h1>Post a Playdate!</h1>
+    <form class="form" data-pet="postform">
+        <div class="form-group">
+            <label for="pName"><span>Pet Name: </span></label>
+            <input type="text" class="form-control" id="pName" name="PetName" required>
+        </div>
+        <div class="form-group">
+            <label for="pType"><span>Pet Type: </span></label>
+            <input type="text" class="form-control" id="pType" name="PetType" required>
+        </div>
+        <div class="form-group">
+            <label for="pDesc"><span>Pet Description: </span></label>
+            <textarea class="form-control" rows="3" cols="50" id="pDesc" name="PetDescription" placeholder="Enter text here..." required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="pLoc"><span>City: </span></label>
+            <input type="text" class="form-control" id="pLoc" name="PetLocation" required>
+        </div>
+        <div class="form-group">
+            <label for="pZip"><span>Zipcode: </span></label>
+            <input type="text" class="form-control" id="pZip" name="PetZipcode" required>
+        </div>
+        <div class="form-group">
+            <label for="pImg">Select image: </label>
+            <input type="file" id="pImg" name="PetImage" accept="image/*">
+        </div>
+        <div class="form-group">
+            <button type="submit">Post playdate</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
