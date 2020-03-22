@@ -2,3 +2,18 @@
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.pawbox{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.allbackground{
+    background-color: aqua;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}

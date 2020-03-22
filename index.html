@@ -8,29 +8,37 @@
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
-<body class="container">
-    <div class="row">
-        <div class="col">
+<body class="container allbackground">
+    <div class="row align-items-center">
+        <div class="col pawbox">
             <img src="img/pawprint.png" class="img-fluid pawprint" alt="pawprint">
         </div>
-        <div class="col">
+        <div class="col align-items-center">
             <div class="container-fluid">
                 <h3>Pet Playdate</h3>
                 <form class="form" data-pet="loginform">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="usr" placeholder="Username" name="loginUser" required>    
+                        <div class="inline">
+                            <label for="usr">Username: </label>
+                            <input type="text" class="form-control" id="usr" placeholder="Username" name="loginUser" required autofocus>        
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="pwd" placeholder="Password" name="loginPass" required>
+                        <div class="inline">
+                            <label for="pwd">Password: </label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Password" name="loginPass" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <button type="submit">Login</button>
-                        <button type="button" onclick="">Sign up</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                    <div class="form-group">
+                        <a href="./signup.html" class="text-body">Don't have an account? Click here to sign up!</a>
                     </div>
 
                 </form>
             </div>
         </div>
-</div>
+    </div>
 </body>
 </html>

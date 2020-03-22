@@ -5,30 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search for a Playdate</title>
+    <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 
 </head>
-<body class="container">
+<body class="container allbackground">
     <h3>Search For A Playdate</h3>
     <div class="row">
         <div class="col-md-5">
-            <div class="inline">
-                <label for="sZip">Zip Code: </label>
-                <input type="text" id="sZip" name="SearchZip">
+            <div class="inline row">
+                <label class="col-md-3 col-form-label" for="sZip">Zip Code: </label>
+                <div class="col-md-9">
+                    <input class="form-control" type="text" id="sZip" name="SearchZip">
+                </div>
             </div>
         </div>
         <div class="col-md-5">
-            <div class="inline">
-                <label for="sType">Pet Type: </label>
-                <input type="text" id="sType" name="SearchType">
+            <div class="inline row">
+                <label class="col-md-3 col-form-label" for="sType">Pet Type: </label>
+                <div class="col-md-9">
+                    <input class="form-control" type="text" id="sType" name="SearchType">
+                </div>
             </div>
         </div>
         <div class="col-md-2">
             <!-- This can either be search or filter, so it shows everything then limits it to zip/type
-            or can show nothing until a zip/type is given and the button is pressed-->
-            <button type="button" onclick="">Filter</button>
-            <button type="button" onclick="">Back</button>
+            or can show nothing until a zip/type is given and the button is pressed, but if zip/type
+            is empty can be treated as * so all zipcodes/types -->
+            <button class="btn btn-primary" type="button" onclick="">Filter</button>
         </div>
+    </div>
+    <div class="row">
+        <!-- PHP to query database based on filter and run a loop to display the postings -->
     </div>
 </body>
 </html>
