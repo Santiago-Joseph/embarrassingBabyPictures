@@ -1,75 +1,67 @@
-<?php require_once 'controllers/authController.php'; ?>
-
+<?php include('server.php') ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
     <title>FurEverFriends-Register</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-md-6 offset-md-6 form-div">
-                <form action="signup.php" method="post">
-                    <h1 class="text-center titleApp">Fur-Ever Friends</h1>
-                    <h6 class="text-center">Sign up to set play dates for your pets</h6>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6"></div>
+			<div class="col-sm-6">
 
-                    <?php if(count($errors) > 0): ?>
-                    <div class="alert alert-danger">
-                        <?php foreach($errors as $error): ?>
-                            <li> <?php echo $error; ?></li>
-                        <?php endforeach; ?>
-                    </div>
-                    <?php endif; ?>
+				<div class="container">
+				<div class="header">
+					<h2>Fur-Ever Friends</h2>
+					<h6 class="text-center">Sign up to set play dates for your pets</h6>
+				</div>
+				
+				
+				<form action="SignUp.php" method="post">
+					<?php include('errors.php'); ?>
+					<div class="input-group">
+					<label>First Name</label>
+					<input type="text" name="firstname">
+					</div>  
+					<div class="input-group">
+					<label>Last Name</label>
+					<input type="text" name="lastname">
+					</div>
+					<div class="input-group">
+					<label>Phone Number</label>
+					<input type="text" name="phone">
+					</div>    
+					<div class="input-group">
+					<label>Username</label>
+					<input type="text" name="username" value="<?php echo $username; ?>">
+					</div>
+					<div class="input-group">
+					<label>Email</label>
+					<input type="email" name="email" value="<?php echo $email; ?>">
+					</div>
+					<div class="input-group">
+					<label>Password</label>
+					<input type="password" name="password_1">
+					</div>
+					<div class="input-group">
+					<label>Confirm password</label>
+					<input type="password" name="password_2">
+					</div>
+					<div class="input-group">
+					<button type="submit" class="btn" name="signup-btn">Sign Up</button>
+					</div>
+					<p>
+						Already a member? <a href="login.php">Sign in</a>
+					</p>
+				</form>
+				</div>
 
-                    <div class="form-group">
-                        <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" value="<?php echo $firstName; ?>" class="form-control form-control-lg">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" value="<?php echo $lastName; ?>" class="form-control form-control-lg">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="userName">Username</label>
-                        <input type="text" name="userName" value="<?php echo $userName; ?>" class="form-control form-control-lg">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" value="<?php echo $email; ?>" class="form-control form-control-lg">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" class="form-control form-control-lg">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="passwordConf">Confirm Password</label>
-                        <input type="password" name="passwordConf" class="form-control form-control-lg">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" name="phone" value="<?php echo $phone; ?>" class="form-control form-control-lg">
-                    </div>
-
-                    <div class="form-group">
-                        <button type ="submit" name="signup-btn" class="btn btn-primary btn-block btn-lg">Sign Up</button>
-                    </div>
-                    <p class="text-center">Already a member? <a href="login.php">Sign In</a></p>
-
-                </form>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>  
+	</div> 
 </body>
 </html>
