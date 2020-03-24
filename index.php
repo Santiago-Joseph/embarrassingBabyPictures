@@ -17,7 +17,7 @@
 	<title>FurEverFriends-Home</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body id="allbody">
 
 <div class="header">
 	<h2>Home Page</h2>

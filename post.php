@@ -14,11 +14,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Post a Playdate</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
-<body class="container allbackground">
+<body class="container" id="allbody">
+    <div class="header">
     <h1>Post a Playdate!</h1>
+    </div>
     <form action="createpost.php" method="post" class="form" enctype="multipart/form-data" data-pet="postform">
         <div class="form-group row">
             <label class="col-md-2 col-form-label" for="pName">Pet Name:</label>
@@ -62,7 +65,7 @@
                 <input class="form-control-file border" type="file" id="pImg" name="PetImage" accept="image/*">
             </div>
         </div>
-        <div class="form-group">
+        <div class="buttons">
             <button class="btn btn-primary" type="submit">Post playdate</button>
             <button class="btn btn-primary" onclick="window.location='index.php'" type="button">Cancel</button>
         </div>

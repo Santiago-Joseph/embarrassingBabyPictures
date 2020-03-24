@@ -10,12 +10,25 @@
   }
 
   #loginbody{
-    background-image: url('img/login_bg.png');
+    background-image: url('img/login_bg.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
   }
+
+  #allbody{
+    background-image: url('img/all_bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .table{
+    background-color: white;
+  }
+ 
   
   .header {
     /* width: 30%; */
@@ -30,8 +43,8 @@
   }
 
   .loginheader {
-    width: 30%;
-    margin: 10px auto 0px;
+    width: 60%;
+    margin: 70px auto 0px;
     color: white;
     background: #5F9EA0;
     text-align: center;
@@ -51,7 +64,7 @@
   }
 
   .loginform{
-    width: 30%;
+    width: 60%;
     margin: 0px auto 10px auto;
     padding: 20px;
     border: 1px solid #B0C4DE;
@@ -98,4 +111,13 @@
     background: #dff0d8; 
     border: 1px solid #3c763d;
     margin-bottom: 20px;
+  } 
+  
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+  .postimage{
+      max-width: 500px;
   }
