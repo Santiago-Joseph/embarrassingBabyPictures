@@ -64,7 +64,7 @@
         </div>
         <div class="form-group">
             <button class="btn btn-primary" type="submit">Post playdate</button>
-            <button class="btn btn-primary" onclick="window.location='about.html'" type="button">Cancel</button>
+            <button class="btn btn-primary" onclick="window.location='index.php'" type="button">Cancel</button>
         </div>
     </form>
 </body>

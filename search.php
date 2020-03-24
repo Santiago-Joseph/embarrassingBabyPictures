@@ -11,11 +11,8 @@ if(isset($_GET['sbtn'])){
     $type = $_GET['SearchType'];
 }
 
-$connection = mysqli_connect('localhost','phpmyadmin','Password1!','database');
-if (!$connection){
-    echo "Cannot connect to MySQL".mysqli_connect_error();
-    exit();
-}
+include('connection.php');
+
 
 if($zip != "" and $type != ""){
     $query = "SELECT * FROM post WHERE pets_type = '$type' AND zip_code = '$zip'";
@@ -74,7 +71,7 @@ if(!$result){
             or can show nothing until a zip/type is given and the button is pressed, but if zip/type
             is empty can be treated as * so all zipcodes/types -->
                 <button class="btn btn-primary" type="submit" name="sbtn">Filter</button>
-                <button class="btn btn-primary" type="button" onclick="window.location='about.html'" name="backbtn">Back</button>
+                <button class="btn btn-primary" type="button" onclick="window.location='index.php'" name="backbtn">Back</button>
         </div>
     </div>
     </form>

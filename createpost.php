@@ -6,16 +6,13 @@
   	header('location: login.php');
   }
 
-$connection = mysqli_connect('localhost','phpmyadmin','Password1!','database');
-if (!$connection){
-    echo "Cannot connect to MySQL".mysqli_connect_error();
-    exit();
-}
+include('connection.php');
+
 
 $petName = $_POST['PetName'];
 $petType = $_POST['PetType'];
 $petDesc = $_POST['PetDescription'];
-$userName = "Test"; //Replace with session variable once that is set up
+$userName = $_SESSION['username'];
 $petLoc = $_POST['PetLocation'];
 $petZip = $_POST['PetZipcode'];
 $petDate = $_POST['PetDate'];
@@ -29,5 +26,5 @@ $query = "INSERT INTO post(pets_name, pets_type, pets_descript, user_name, date,
 
 mysqli_query($connection, $query);
 
-header("Location: about.html");
+header("Location: index.php");
 ?>
