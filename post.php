@@ -10,7 +10,7 @@
 </head>
 <body class="container allbackground">
     <h1>Post a Playdate!</h1>
-    <form action="createpost.php" method="post" class="form" data-pet="postform">
+    <form action="createpost.php" method="post" class="form" enctype="multipart/form-data" data-pet="postform">
         <div class="form-group row">
             <label class="col-md-2 col-form-label" for="pName">Pet Name:</label>
             <div class="col-md-10">
@@ -50,7 +50,7 @@
         <div class="form-group row">
             <label class="col-md-2 col-form-label" for="pImg">Select image:</label>
             <div class="col-md-10">
-                <input class="form-control-file border" type="file" id="pImg" name="PetImage" accept="image/*" required>
+                <input class="form-control-file border" type="file" id="pImg" name="PetImage" accept="image/*">
             </div>
         </div>
         <div class="form-group">

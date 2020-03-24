@@ -14,7 +14,10 @@ $userName = "Test"; //Replace with session variable once that is set up
 $petLoc = $_POST['PetLocation'];
 $petZip = $_POST['PetZipcode'];
 $petDate = $_POST['PetDate'];
-$petImg = $_POST['PetImage'];
+
+$img = $_FILES['PetImage']['tmp_name'];
+
+$petImg = addslashes(file_get_contents($img));
 
 $query = "INSERT INTO post(pets_name, pets_type, pets_descript, user_name, date, location, zip_code, picture)
             VALUES('$petName','$petType','$petDesc','$userName','$petDate','$petLoc','$petZip','$petImg')";

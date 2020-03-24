@@ -17,3 +17,7 @@
     display: flex;
     justify-content: space-around;
 }
+
+.postimage{
+    max-width: 500px;
+}

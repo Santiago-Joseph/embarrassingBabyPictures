@@ -15,6 +15,13 @@
 
     $post = mysqli_fetch_assoc($result);
 
+    $picquery = "SELECT * FROM post WHERE post_id = '$postID'";
+
+    $picresult = mysqli_query($connection, $picquery);
+
+    $img = mysqli_fetch_array($picresult);
+
+
     //NEEDS TO QUERY USER TABLE TO FIND MATCHING USERNAME FOR DETAILS
 
 ?>
@@ -30,9 +37,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body class="container allbackground">
-    <?php 
-    print $post['picture'];
-    ?>
+    <div class="row">
+        <div class="col">
+    <img src="dbimg.php?id=<?php echo $postID ?>" class="img-responsive" width="100%" />
+</div>
+<div class="col">
     <table class="table">
         <tr>
             <td>Pet Name</td>
@@ -65,6 +74,7 @@
     </table>
     <button class="btn btn-primary" name="acceptbtn">Accept</button>
     <button class="btn btn-primary" name="backbtn" onclick="window.location='search.php'">Go back</button>
+</div>
 </body>
 </html>
 
