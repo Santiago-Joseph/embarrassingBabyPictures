@@ -108,7 +108,7 @@
                 </div>
                 <div class="modal-footer">
                     <form method="post">
-                        <button type="submit" class="btn btn-primary" name="deleteButton">Close</button>
+                        <button type="submit" class="btn" name="deleteButton">Close</button>
                     </form>
                 </div>
             </div>
