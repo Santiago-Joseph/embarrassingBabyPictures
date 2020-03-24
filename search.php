@@ -6,6 +6,9 @@
   	header('location: login.php');
   }
 
+$zip = "";
+$type = "";
+
 if(isset($_GET['sbtn'])){
     $zip = $_GET['SearchZip'];
     $type = $_GET['SearchType'];

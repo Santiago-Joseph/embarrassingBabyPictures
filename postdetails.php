@@ -17,6 +17,10 @@
 
     $result = mysqli_query($connection, $query);
 
+    if(mysqli_num_rows($result) == 0){
+        header('location: search.php');
+    }
+
     $post = mysqli_fetch_assoc($result);
 
     $picquery = "SELECT * FROM post WHERE post_id = '$postID'";
@@ -36,8 +40,9 @@
     <title>Details</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body class="container allbackground">
     <div class="row">
@@ -84,8 +89,8 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Contact Information</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <p>Thank you for accepting the playdate! Contact <?php echo $post['firstname'];?> by phone or email.</p>
@@ -93,7 +98,7 @@
                     <p>Email: <?php echo $post['email'];?></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
