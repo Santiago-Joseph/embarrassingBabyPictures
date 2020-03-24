@@ -29,6 +29,15 @@
 
     $img = mysqli_fetch_array($picresult);
 
+    if(isset($_POST['deleteButton'])){
+
+        $query = "DELETE FROM post WHERE post_id = '$postID'";
+
+        $result = mysqli_query($connection, $query);
+
+        header('location: search.php');
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -98,7 +107,9 @@
                     <p>Email: <?php echo $post['email'];?></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="window.location='deletepost.php?id=<?php echo $postID?>'" data-dismiss="modal">Close</button>
+                    <form method="post">
+                        <button type="submit" class="btn btn-primary" name="deleteButton">Close</button>
+                    </form>
                 </div>
             </div>
         </div>
