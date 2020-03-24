@@ -54,7 +54,7 @@ if (isset($_POST['signup-btn'])) {
   	$sql = "INSERT INTO users (firstname, lastname, phone, username, email, password) 
   			  VALUES('$firstname', '$lastname', '$phone', '$username', '$email', '$password')";
       mysqli_query($db, $sql);
-  	$_SESSION['username'] = $username;
+    $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";  
   	header('location: index.php');
   }

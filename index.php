@@ -37,7 +37,21 @@
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
-    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	<h3><p>Welcome <strong><?php echo $_SESSION['username']; ?></strong>,</p></h3>
+        <br>
+		<p>
+            Pet Playdate is a website with the intent of helping others find playdates for their pets.
+            A pet owner can't always make time for their pets when they have to work all day and want to relax
+            at home. That's where we come in! We help set playdates up, so while your pets are playing around
+            with other pets you can relax, or if you're just looking for some help finding others to have a
+            playdate with, we're here to help!
+        </p> 
+        <br>
+		<div class="buttons">
+        <button type="button" class="btn btn-primary" onclick="window.location='search.php'">Search for a playdate!</button>
+        <button type="button" class="btn btn-primary" onclick="window.location='post.php'">Post a playdate request!</button>
+    	</div> 
+        <br>
     	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 </div>
