@@ -36,13 +36,13 @@
     <title>Details</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body class="container allbackground">
     <div class="row">
         <div class="col">
-            <img src="dbimg.php?id=<?php echo $postID ?>" class="img-responsive" width="100%" />
+            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($img['picture']).'" class="img-responsive" width="100%"/>';?>
         </div>
         <div class="col">
             <table class="table">
@@ -80,8 +80,8 @@
         </div>
     </div>
     
-    <div class="modal fade" id="myModal" role="dialog">
-        <div clas="modal-dialog">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
