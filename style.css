@@ -28,7 +28,10 @@
   .table{
     background-color: white;
   }
- 
+
+  .petdetails{
+	margin-top: 50px;
+  }
   
   .header {
     /* width: 30%; */

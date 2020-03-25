@@ -25,15 +25,15 @@
 					<?php include('errors.php'); ?>
 					<div class="input-group">
 					<label>First Name</label>
-					<input type="text" name="firstname">
+					<input type="text" name="firstname" value="<?php echo $firstname;?>">
 					</div>  
 					<div class="input-group">
 					<label>Last Name</label>
-					<input type="text" name="lastname">
+					<input type="text" name="lastname" value="<?php echo $lastname;?>">
 					</div>
 					<div class="input-group">
 					<label>Phone Number</label>
-					<input type="text" name="phone">
+					<input type="text" name="phone" value="<?php echo $phone;?>">
 					</div>    
 					<div class="input-group">
 					<label>Username</label>

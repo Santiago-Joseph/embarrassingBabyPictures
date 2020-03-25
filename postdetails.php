@@ -54,6 +54,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body class="container" id="allbody">
+<div class="petdetails">
     <div class="row">
         <div class="col">
             <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($img['picture']).'" class="img-responsive" width="100%"/>';?>
@@ -93,7 +94,7 @@
             <button type="button" class="btn btn-primary" name="backbtn" onclick="window.location='search.php'">Go back</button>
         </div>
     </div>
-    
+</div>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

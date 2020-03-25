@@ -11,7 +11,7 @@
 		<div class="row">
 			<div  class="container col">
 			<div class="loginheader">
-						<h2>Login</h2>
+						<h2>Fur-Ever Friends</h2>
 					</div>
 						
 					<form method="post" action="login.php" class="loginform">

@@ -56,7 +56,7 @@
         <div class="form-group row">
             <label class="col-md-2 col-form-label" for="pDate">Date:</label>
             <div class="col-md-10">
-                <input type="text" class="form-control" id="pDate" placeholder="mm/dd/yyyy" name="PetDate" required>
+                <input type="date" class="form-control" id="pDate" placeholder="mm/dd/yyyy" name="PetDate" required>
             </div>
         </div>
         <div class="form-group row">
