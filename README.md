@@ -1,7 +1,11 @@
 # Pet Play dates
 Pet Owners can setup play dates for their pets
 
-First We created a database using PHPMyAdmin. The database is called petdates. In the petdates database, we have a table called users which contain the following:
+Demo on how our website functions and how to use it:  
+https://www.youtube.com/watch?v=wLiDKSpH3AQ
+
+
+First create a database using PHPMyAdmin. The database is called petdates. In the petdates database, we have a table called users which contain the following:
 
 * id - int(11) auto increment
 * firstname varchar(100)
